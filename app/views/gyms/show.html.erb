@@ -1,3 +1,7 @@
 <h2><%= @gym.name %></h2>
 <h3><%= @gym.address %></h3>
 <p><%= @gym.description %></p>
+
+<%= link_to "Back", root_path %>
+<%= link_to "Edit", edit_gym_path(@gym) %>
+<%= link_to "Delete", gym_path(@gym), method: :delete, data: {confirm: "Are you sure?"} %>

@@ -23,6 +23,26 @@ class GymsController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+
+	def update
+
+		if @gym.update(gym_params)
+			redirect_to gym_path(@gym)
+		else
+			render 'edit'
+		end
+
+	end
+
+	def destroy
+		@gym.destroy
+		redirect_to root_path
+	end
+
+	# edit and update won't have a view files, they are responsable for changes in the data base.
+
 	private
 
 	def gym_params
