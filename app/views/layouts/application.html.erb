@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+    <div class = "container">  <!-- para que no esté todo pegado a la izquierda -->
+      <%= yield %>
+    </div>
+
   </body>
 </html>
