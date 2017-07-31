@@ -1,0 +1,6 @@
+<%= simple_form_for @gym do |f| %>
+  <%= f.input :name, label: "Gym's name" %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.button :submit %> <!-- Aca cambio los vaores default por los valores necesarios para la creacion de cada gym -->
+<% end %>
