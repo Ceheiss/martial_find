@@ -1,6 +1,7 @@
 <h1>Edit Gym</h1>
 
 <%= simple_form_for @gym, html: {multipart: true} do |f| %>
+  <%= f.file_field :gym_img %>
   <%= f.select :category_id, @categories %> 
   <!-- options for select requiere de un array para funcionar. Nombres están asociados al numero -->
   <%= f.input :name, label: "Gym's name" %>
