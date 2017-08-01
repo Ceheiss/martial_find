@@ -1,4 +1,6 @@
 <%= simple_form_for @gym do |f| %>
+  <%= select_tag(:category_id, options_for_select(@categories), :prompt=> "Select a gym category") %> 
+  <!-- options for select requiere de un array para funcionar. Nombres están asociados al numero -->
   <%= f.input :name, label: "Gym's name" %>
   <%= f.input :description %>
   <%= f.input :address %>
