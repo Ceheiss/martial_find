@@ -15,11 +15,9 @@
   <div class="navbar-header">
    <%= link_to "MartialFind", root_path, class: "navbar-brand" %>
   </div>
-  <!-- Para agregar gimnasios-->
+  
     <ul class="nav navbar-nav">
-      <% if user_signed_in? %>
-        <li><%= link_to "Add Gym", new_gym_path %></li>
-      <% end %> 
+       
       <!-- dropdown menu -->
         <li class="dropdown">
          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -31,13 +29,17 @@
            </li>
           <% end %>
          </ul>
+       <!-- Para agregar gimnasios-->
+        <% if user_signed_in? %>
+         <li><%= link_to "Add Gym", new_gym_path %></li>
+        <% end %>
     </ul>
   
 
 
 
 
-  <!-- Aca comienza la sopciones de sign up y sign out -->
+  <!-- Aca comienza las opciones de sign up y sign out -->
   <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>

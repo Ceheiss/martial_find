@@ -3,7 +3,12 @@ class GymsController < ApplicationController
 
 
 	def index
+		if params[:category].blank?
 		@gyms = Gym.all.order("created_at DESC") #DESC is descending orden
+	    else
+	    @category_id = Category.find_by(name: params[:category]).id
+	    @gyms = Gym.where(:category_id => @category_id).order("created_at DESC")
+	    end
 	end
 
     def category
