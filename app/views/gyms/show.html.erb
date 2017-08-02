@@ -1,13 +1,24 @@
-<h2><%= @gym.name %></h2>
-<h3><%= @gym.address %></h3>
-<h4><%= @gym.category.name %></h4>
-<p><%= @gym.description %></p>
+<div class="row">
+ <div class="col-md-4">
+  <%= image_tag @gym.gym_img.url(:gym_show), class: "gym-show" %>
+ </div>
+
+ <div class="col-md-8">
+	 <div class="gym-info">
+		<h2 class="gym-name"><%= @gym.name %></h2>
+		<h3 class="gym-address"><span>Located in: </span><%= @gym.address %></h3>
+		<h4 class="gym-address"><%= @gym.category.name %></h4>
+		<p class="gym-description"><%= @gym.description %></p>
+	 </div>
+ </div>
+
+</div>
 
 <div class="links btn-group">
 	<% if user_signed_in? %>  <!-- es condicional porque si se tiene nil va a salir un error -->
 		<% if @gym.user_id == current_user.id %>  <!-- y si ese usuario es el creador del gym, entonces puede editar y borrar y eso -->
-			<%= link_to "Edit", edit_gym_path(@gym) %>
-			<%= link_to "Delete", gym_path(@gym), method: :delete, data: {confirm: "Are you sure?"} %>
+			<%= link_to "Edit", edit_gym_path(@gym), class: "btnbtn-custom" %>
+			<%= link_to "Delete", gym_path(@gym), method: :delete, data: {confirm: "Are you sure?"}, class: "btnbtn-custom" %>
 		<% end %>
 	<% end %>
 </div>

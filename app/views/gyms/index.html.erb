@@ -5,9 +5,9 @@
 <% else %>
  <div class="row">
 	<% @gyms.each do |gym| %>
-		<div class="col-md-3">
+		<div class="col-md-4">
 		 <a href="/gyms/ <%= gym.id %>" >
-		   <%= image_tag gym.gym_img.url(:gym_index), class: "play" %>
+		   <%= image_tag gym.gym_img.url(:gym_index), class: "gym" %>
 		 </a>
 		</div>  
 	<% end %>
