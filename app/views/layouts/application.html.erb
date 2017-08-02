@@ -6,14 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   </head>
 
   <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
  <div class="container-fluid">
   <div class="navbar-header">
-   <%= link_to "MartialFind", root_path, class: "navbar-brand" %>
+   <%= link_to "MartialFind", root_path, class: "navbar-brand", id: "logo" %>
   </div>
   
     <ul class="nav navbar-nav">
@@ -35,7 +42,6 @@
         <% end %>
     </ul>
   
-
 
 
 

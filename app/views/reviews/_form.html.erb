@@ -1,0 +1,9 @@
+<%= simple_form_for([@gym, @gym.reviews.build]) do |f| %>
+	<div id="rating-form">
+		<%= f.input :rating %>
+	</div>
+	<%= f.input :comment %>
+	<%= f.button :submit %>
+
+<% end %>
+
