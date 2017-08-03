@@ -4,6 +4,7 @@
  </div>
 
  <div class="col-md-8">
+ 
 	 <div class="gym-info informacion">
 		<h2 class="gym-name"><%= @gym.name %></h2>
 		<h3 class="gym-address"><span><em>Located in: </em></span><%= @gym.address %></h3>
@@ -36,3 +37,15 @@
 		<% end %>
 	<% end %>
 </div>
+
+
+
+<script>
+	$('.review-rating').raty({
+		readOnly: true,
+		score: function() {
+			return $(this).attr('data-score');
+		},
+		path: '/assets/'
+	});
+</script>
