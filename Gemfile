@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.3'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
+gem 'jquery-turbolinks'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

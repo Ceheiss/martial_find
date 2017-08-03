@@ -9,12 +9,12 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//  // require turbolinks --> sacado porque estaba afectando la aparicion d elas estrellas
+
 
 //= require jquery
 //= require jquery_ujs
-
+//= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .

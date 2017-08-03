@@ -1,7 +1,6 @@
 class GymsController < ApplicationController
 	before_action :find_gym, only: [:show, :update, :edit, :destroy]
-
-
+	before_action :authenticate_user!, only:[:new, :edit]
 	def index
 		if params[:category].blank?
 		@gyms = Gym.all.order("created_at DESC") #DESC is descending orden
@@ -16,6 +15,11 @@ class GymsController < ApplicationController
     end
 
 	def show
+		if @gym.reviews.blank? 
+		  @average_review = 0
+		else
+		  @average_review = @gym.reviews.average(:rating).round(2) 
+		end
 	end
 
 	def new
