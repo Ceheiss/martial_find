@@ -1,6 +1,7 @@
 class GymsController < ApplicationController
 	before_action :find_gym, only: [:show, :update, :edit, :destroy]
 	before_action :authenticate_user!, only:[:new, :edit]
+	
 	def index
 		if params[:category].blank?
 		@gyms = Gym.all.order("created_at DESC") #DESC is descending orden
